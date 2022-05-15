@@ -25,7 +25,7 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.lsTicket = New System.Windows.Forms.ListBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -59,14 +59,14 @@ Partial Class Form1
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
-        'ListBox1
+        'lsTicket
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 15
-        Me.ListBox1.Location = New System.Drawing.Point(33, 38)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(322, 724)
-        Me.ListBox1.TabIndex = 2
+        Me.lsTicket.FormattingEnabled = True
+        Me.lsTicket.ItemHeight = 15
+        Me.lsTicket.Location = New System.Drawing.Point(33, 38)
+        Me.lsTicket.Name = "lsTicket"
+        Me.lsTicket.Size = New System.Drawing.Size(322, 724)
+        Me.lsTicket.TabIndex = 2
         '
         'PictureBox3
         '
@@ -163,10 +163,12 @@ Partial Class Form1
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.lsTicket)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
+        Me.MaximizeBox = False
         Me.Name = "Form1"
+        Me.ShowIcon = False
         Me.Text = "Super JJ Feliz"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -179,7 +181,7 @@ Partial Class Form1
 
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents lsTicket As ListBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Button1 As Button
