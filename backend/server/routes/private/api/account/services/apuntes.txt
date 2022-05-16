@@ -1,0 +1,20 @@
+      //if(errorPG.code == '23505'){ console.log('Clave repetida, no se logro hacer la solicitud'); } else { console.log(errorPG); }
+
+  /*const criptoPass = await bcrypt.hash(myPlaintextPassword, saltRounds).then(function(hash) {
+    return hash;
+  });*/
+
+
+  CREATE SEQUENCE public.users_sequence;
+CREATE TABLE public.user (
+    user_id smallint NOT NULL DEFAULT nextval('users_sequence')
+);
+ALTER SEQUENCE users_sequence OWNED BY public.user.user_id;
+
+
+CREATE TABLE public.users (
+    id SERIAL NOT NULL,
+	name text,
+	fullname text,
+	adminpower text
+);
