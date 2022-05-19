@@ -9,7 +9,7 @@ const clientDB = new Client({
     password: process.env.DB_PASSWORD2,
     database: process.env.DB_DATABASE2
 });
-
+/*
 clientDB.connect(err => {
     if (err) {
       console.error('[DATABASE] ->', err.stack)
@@ -17,5 +17,7 @@ clientDB.connect(err => {
       console.log('[DATABASE] CONECTADO');
     }
 });
+
+*/
 
 module.exports = clientDB;
