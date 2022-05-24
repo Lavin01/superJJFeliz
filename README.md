@@ -1,7 +1,13 @@
 # Funcionamiento Base de Datos
 
 ## Tabla de Articulos
-> ID
+### > ID
 
 **Descripcion:** Esta columna servirá como identificador único en la tabla para caracterizar e individualizar consultas. 
-**Características:** Clave Primaria, Auto Incrementable.
+**Características:** [Integer] Clave Primaria, Auto Incrementable, Se asigna automaticamente
+
+
+### > Nombre
+
+**Descripcion:** Esta columna contiene el nombre del articulo
+**Características:** [Text] Necesario
