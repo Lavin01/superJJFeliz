@@ -1,7 +1,7 @@
 # Funcionamiento Base de Datos
 
 ## Tabla de Articulos
-!(https://i.imgur.com/MCebcZt.png)
+!["Imagen"](https://i.imgur.com/MCebcZt.png)
 ### > ID
 
 **Descripcion:** Esta columna servirá como identificador único en la tabla para caracterizar e individualizar consultas. 
