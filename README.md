@@ -38,9 +38,8 @@
 **Características:** [SmallInt] Se basa en numeros únicos que harán como clasificadores al momento de codificarse
 
 **Codificaciones**
-**0:** Indefinido
-- [ 0 ] Indefinido
-- [ 1 ] Add delight to the experience when all tasks are complete
+- [0] Indefinido
+- [1] Add delight to the experience when all tasks are complete
 **1:** Unidad (ej: 1* botella de agua)
 **2:** Kg (ej: 1* Kilo de Mango)
 **3:** Litros (ej: 1* Litro de Agua)
