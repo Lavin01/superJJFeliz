@@ -42,3 +42,6 @@
 **1:** Unidad (ej: 1* botella de agua)
 **2:** Kg (ej: 1* Kilo de Mango)
 **3:** Litros (ej: 1* Litro de Agua)
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
