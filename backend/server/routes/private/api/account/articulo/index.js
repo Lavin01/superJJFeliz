@@ -120,12 +120,31 @@ router.post('/', async (req, res) => {
 });
 
 
+const deleteArticulo = async (wco) => {
+
+    console.log(wco)
+    const esPosible = await verificarArticulo(wco);
+    if(esPosible.status === 200){
+        const checarQuery = `DELETE FROM public.articulos WHERE codigo='${wco}'`;
+        const consultaWhoop = await clientDB.query(checarQuery);
+        const p1 = new Promise( function(resolve, reject) { setTimeout(function() {  resolve(true)  },1) } )
+        try {
+            await p1
+            console.log(consultaWhoop)
+                return { status: 200, return: `El articulo con el codigo ${wco} se elimino correctamente`, masInfo: esPosible.contenido };
+        } catch (errorPG) {
+                console.log(errorPG);
+        }
+    } else {
+        return { status: 400, return: `No se encontro ningun articulo con el codigo ${wco}` }
+    }
+}
 router.delete('/', async (req, res) => {
     let time1 = performance.now(); //? Dev Check Performance
 
     console.log(req.query);
 
-    let h = await upArticulo(req.query.nombre, req.query.cantidad, req.query.descripcion, req.query.unidad, req.query.codigo);
+    let h = await deleteArticulo(req.query.codigo);
 
     console.log(h);
 
