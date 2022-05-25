@@ -2,7 +2,8 @@ const express = require('express');
 
 // Login - LogOut
 const createAccount = require('./api/account/create');
-const infoArticulo = require('./api/account/login');
+const manipularArticulo = require('./api/account/articulo');
+const verArticulos = require('./api/account/articulos');
 /*
 const usersRouter = require('./api/account/delete');
 const usersRouter = require('./api/account/logout');
@@ -13,7 +14,8 @@ function routerApiPrivate(app, rateLimit) {
     app.use('/api', router2);
 
     router.use('/super/info', createAccount)
-    router2.use('/super/articulo', infoArticulo)
+    router2.use('/super/articulo', manipularArticulo)
+    router2.use('/super/articulos', verArticulos)
 }
 
 module.exports = routerApiPrivate;
