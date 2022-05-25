@@ -78,7 +78,7 @@ router.get('/', async (req, res) => {
 
 
 
-const upArticulo = async (wn, wc, wd, wu, wco) => {
+const upArticulo = async (wn, wc, wd, wu, wco, wp) => {
 
     console.log(wn)
 
@@ -92,7 +92,7 @@ const upArticulo = async (wn, wc, wd, wu, wco) => {
                 return { status: 200, contenido: consultaWhoop.rows[0] };
         }
         else { 
-            const sendQuery = `INSERT INTO public.articulos(nombre, cantidad, descripcion, unidad, codigo) VALUES ('${wn}', ${wc}, '${wd}', ${wu}, '${wco}');`;
+            const sendQuery = `INSERT INTO public.articulos(nombre, cantidad, descripcion, unidad, codigo, precio) VALUES ('${wn}', ${wc}, '${wd}', ${wu}, '${wco}', ${wp});`;
             const sendReturnQuery = await clientDB.query(sendQuery);
             await p1
             console.log(sendReturnQuery);
@@ -108,11 +108,11 @@ router.post('/', async (req, res) => {
 
     console.log(req.query);
 
-    let h = await upArticulo(req.query.nombre, req.query.cantidad, req.query.descripcion, req.query.unidad, req.query.codigo);
+    let h = await upArticulo(req.query.nombre, req.query.cantidad, req.query.descripcion, req.query.unidad, req.query.codigo, req.query.precio);
 
     console.log(h);
 
-    res.status(200).json(h)
+    res.status(200).json({status: h.status, callInfo: req.query})
     let time2 = performance.now(); //? Dev Check Performance
     let totalTime = time2 - time1;
     console.log(`TIMEE TAKED ${time1} + ${time2} // TIME LAPSED:`);
