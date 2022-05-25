@@ -3,13 +3,13 @@ dotenv.config();
 const { Client } = require('pg');
 
 const clientDB = new Client({
-    host: process.env.DB_HOST2,
-    user: process.env.DB_USER2,
-    port: process.env.DB_PORT2,
-    password: process.env.DB_PASSWORD2,
-    database: process.env.DB_DATABASE2
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    port: process.env.DB_PORT,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE
 });
-/*
+
 clientDB.connect(err => {
     if (err) {
       console.error('[DATABASE] ->', err.stack)
@@ -17,7 +17,5 @@ clientDB.connect(err => {
       console.log('[DATABASE] CONECTADO');
     }
 });
-
-*/
 
 module.exports = clientDB;

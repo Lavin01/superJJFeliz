@@ -1,29 +1,21 @@
 const express = require('express');
 const loginFunction = require('../services/adminAccount');
 
+const clientDB = require('../../../dbConect');
+
 const router = express.Router();
-function verifyToken(req, res, next) {
-  const bearerHeader = req.headers['authorization'];
 
-  if (bearerHeader) {
-    const bearer = bearerHeader.split(' ');
-    const bearerToken = bearer[1];
-    req.token = bearerToken;
-    next();
-  } else {
-    res.sendStatus(403);
-  }
-}
-
-
-router.post('/', verifyToken, async (req, res) => {
+router.get('/', async (req, res) => {
     let time1 = performance.now(); //? Dev Check Performance
-    const convertido =req.body
+    /*const convertido =req.body
     const pName = req.body.uLName;
     const pPassword = req.body.uLPword;
 
-    const elToken = req.token;
-    console.log(convertido);
+    const elToken = req.token;*/
+
+    console.log(req.query);
+
+   /* console.log(convertido);
     if(pName != undefined && pPassword !== undefined){
         if(typeof pName === 'string' && typeof pPassword === 'string'){
             const pNameLength = pName.length, pPasswordLength = pPassword.length;
@@ -41,11 +33,12 @@ router.post('/', verifyToken, async (req, res) => {
     } else {
         res.status(405).json({ error: 'Faltan datos' });
     }
-
+*/
+    res.status(200).json({ random: 'Cool' })
     let time2 = performance.now(); //? Dev Check Performance
     let totalTime = time2 - time1;
     console.log(`TIMEE TAKED ${time1} + ${time2} // TIME LAPSED:`);
-    console.log(totalTime); 
+    console.log(totalTime);
 });
 
 module.exports = router;
