@@ -77,29 +77,30 @@ router.get('/', async (req, res) => {
 
 
 
-
+//let h = await upArticulo(nombre, cantidad,descripcion, unidad, codigo, precio);
 const upArticulo = async (wn, wc, wd, wu, wco, wp) => {
 
-    console.log(wn)
+    console.log(wco)
 
     const checarQuery = `SELECT * FROM public.articulos WHERE codigo='${wco}' LIMIT 1`;
     const consultaWhoop = await clientDB.query(checarQuery);
     const p1 = new Promise( function(resolve, reject) { setTimeout(function() {  resolve(true)  },1) } )
     try {
          await p1
-      
+        console.log(consultaWhoop)
         if (consultaWhoop.rows[0] !== undefined) {
-                return { status: 200, contenido: consultaWhoop.rows[0] };
+                return { status: 200, info: "Ya existe un articulo con ese codigo", contenido: consultaWhoop.rows[0] };
         }
         else { 
             const sendQuery = `INSERT INTO public.articulos(nombre, cantidad, descripcion, unidad, codigo, precio) VALUES ('${wn}', ${wc}, '${wd}', ${wu}, '${wco}', ${wp});`;
             const sendReturnQuery = await clientDB.query(sendQuery);
             await p1
             console.log(sendReturnQuery);
-            return { status: 300 }
+            return { status: 201, info: "Se agrego correctamente el articulo" }
         }
     } catch (errorPG) {
             console.log(errorPG);
+            return { status: 450 };
     }
 }
 
@@ -112,7 +113,7 @@ router.post('/', async (req, res) => {
 
     console.log(h);
 
-    res.status(200).json({status: h.status, callInfo: req.query})
+    res.status(h.status).json({status: h.status, callInfo: req.query, info: h.info})
     let time2 = performance.now(); //? Dev Check Performance
     let totalTime = time2 - time1;
     console.log(`TIMEE TAKED ${time1} + ${time2} // TIME LAPSED:`);
