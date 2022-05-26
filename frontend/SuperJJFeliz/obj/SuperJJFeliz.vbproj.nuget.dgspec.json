@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bywar\\source\\repos\\SuperJJFeliz\\SuperJJFeliz\\SuperJJFeliz.vbproj": {}
+    "C:\\Users\\bywar\\Desktop\\school\\SuperJJFeliz\\frontend\\SuperJJFeliz\\SuperJJFeliz.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\bywar\\source\\repos\\SuperJJFeliz\\SuperJJFeliz\\SuperJJFeliz.vbproj": {
+    "C:\\Users\\bywar\\Desktop\\school\\SuperJJFeliz\\frontend\\SuperJJFeliz\\SuperJJFeliz.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bywar\\source\\repos\\SuperJJFeliz\\SuperJJFeliz\\SuperJJFeliz.vbproj",
+        "projectUniqueName": "C:\\Users\\bywar\\Desktop\\school\\SuperJJFeliz\\frontend\\SuperJJFeliz\\SuperJJFeliz.vbproj",
         "projectName": "SuperJJFeliz",
-        "projectPath": "C:\\Users\\bywar\\source\\repos\\SuperJJFeliz\\SuperJJFeliz\\SuperJJFeliz.vbproj",
+        "projectPath": "C:\\Users\\bywar\\Desktop\\school\\SuperJJFeliz\\frontend\\SuperJJFeliz\\SuperJJFeliz.vbproj",
         "packagesPath": "C:\\Users\\bywar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bywar\\source\\repos\\SuperJJFeliz\\SuperJJFeliz\\obj\\",
+        "outputPath": "C:\\Users\\bywar\\Desktop\\school\\SuperJJFeliz\\frontend\\SuperJJFeliz\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bywar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

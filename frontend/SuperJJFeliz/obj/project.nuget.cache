@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+4U5a0XVS5MW8R/QLIOyX147QObQ1ApyPgTG2tnrqHlOTs7C+Wvla70P/k3PBwNS2usqYTxmKEmjbqfPBQCXyw==",
+  "dgSpecHash": "wE8al7M3TAxgIMflFOli0xHzUUrs68aeFdC/WFC0d3HPY1nRCLFyx7UcVKrldjeOLd7yu2KxA9b7J6LHontgkA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bywar\\source\\repos\\SuperJJFeliz\\SuperJJFeliz\\SuperJJFeliz.vbproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\bywar\\Desktop\\school\\SuperJJFeliz\\frontend\\SuperJJFeliz\\SuperJJFeliz.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bywar\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
