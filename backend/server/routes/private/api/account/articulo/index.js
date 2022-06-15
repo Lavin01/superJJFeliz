@@ -104,6 +104,45 @@ const upArticulo = async (wn, wc, wd, wu, wco, wp) => {
     }
 }
 
+const upVenta = async (pv, pc, vp, pcodigo) => {
+    let currentDate = new Date();
+    let cDay = currentDate.getDate();
+    let cMonth = currentDate.getMonth() + 1;
+    let cYear = currentDate.getFullYear();
+    let time = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
+    let horayfecha = `${time} | ${cDay}/${cMonth}/${cYear}`
+    
+    if(pv, pc, vp, pcodigo){
+        try {
+            const sendQuery = `INSERT INTO public.ventas(productosvendidos, productoscosto, vendidopor, fecha, productoscodigos) VALUES ('${pv}', '${pc}', '${vp}', '${horayfecha}', '${pcodigo}');`;
+            const sendReturnQuery = await clientDB.query(sendQuery);
+            console.log(sendReturnQuery);
+            return { status: 201, info: "Se agrego correctamente el articulo" }   
+        } catch (error) {
+            return { status: 400, info: "Algo salio mal"}
+        }
+    } else {
+        return {status: 400, info: "Faltan datos"}
+    }
+
+}
+
+router.post('/venta', async (req, res) => {
+    let time1 = performance.now(); //? Dev Check Performance
+
+    console.log(req.body);
+
+    let h = await upVenta(req.body.pv, req.body.pc, req.body.vp, req.body.codigo);
+
+    console.log(h);
+
+    res.status(h.status).json({status: h.status, callInfo: req.query, info: h.info})
+    let time2 = performance.now(); //? Dev Check Performance
+    let totalTime = time2 - time1;
+    console.log(`TIMEE TAKED ${time1} + ${time2} // TIME LAPSED:`);
+    console.log(totalTime);
+});
+
 router.post('/', async (req, res) => {
     let time1 = performance.now(); //? Dev Check Performance
 

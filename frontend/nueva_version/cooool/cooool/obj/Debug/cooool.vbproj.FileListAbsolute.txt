@@ -34,3 +34,5 @@ C:\Users\bywar\Desktop\school\SuperJJFeliz\frontend\nueva_version\cooool\cooool\
 C:\Users\bywar\Desktop\school\SuperJJFeliz\frontend\nueva_version\cooool\cooool\obj\Debug\cooool.exe
 C:\Users\bywar\Desktop\school\SuperJJFeliz\frontend\nueva_version\cooool\cooool\obj\Debug\cooool.xml
 C:\Users\bywar\Desktop\school\SuperJJFeliz\frontend\nueva_version\cooool\cooool\obj\Debug\cooool.pdb
+C:\Users\bywar\Desktop\school\SuperJJFeliz\frontend\nueva_version\cooool\cooool\obj\Debug\cooool.Ventas.resources
+C:\Users\bywar\Desktop\school\SuperJJFeliz\frontend\nueva_version\cooool\cooool\obj\Debug\cooool.todasventas.resources
